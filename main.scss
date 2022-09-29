@@ -55,7 +55,7 @@ $ff:'Raleway', sans-serif;
         {
         
             h1{position: absolute;top:0;left:0;color: transparent}
-            @include centering(center,center,row wrap,60px);
+            @include centering(center,center,row wrap,20px);
             width:1000px;
             min-height: 270px;
             font-size: 14px;
@@ -88,7 +88,9 @@ $ff:'Raleway', sans-serif;
 
 
 @media (max-width:767px) {
-    body{background:$Very-Dark-Blue  url('./images/bg-mobile.png')  10% 100% no-repeat;background-size: cover;main{width:300px;
+    body{background:$Very-Dark-Blue  url('./images/bg-mobile.png')  10% 100% no-repeat;background-size: cover;main{width:300px;    
+    @include centering(center,center,row wrap,60px);
+
         .usage-plan{padding: 45px 25px;&_remain{border-radius: 10px !important;top: 75% !important;left:50% !important;transform: translateX(-55%) !important;&::before{left:100% !important;transform: translateX(-100%) !important;border-right-color: transparent !important;}}
     }}
     
