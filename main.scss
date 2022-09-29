@@ -55,7 +55,7 @@ $ff:'Raleway', sans-serif;
         {
         
             h1{position: absolute;top:0;left:0;color: transparent}
-            @include centering();
+            @include centering(center,center,row wrap,60px);
             width:1000px;
             min-height: 270px;
             font-size: 14px;
