@@ -14,7 +14,6 @@ This is a solution to the [Fylo data storage component challenge on Frontend Men
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -44,6 +43,10 @@ Users should be able to:
 ### What I learned
 - How to use functions and mixins and more in scss 
 - how to create psuedo elements with ::before and ::after 
+
+### Continued development
+
+- I will improve code in scss to become more clean nearly .
 
 
 ### Useful resources
