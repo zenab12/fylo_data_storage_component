@@ -1,0 +1,89 @@
+@use "sass:color";
+@use  "sass:map";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+//variables 
+
+$Gradient: hsl(6, 100%, 80%) , hsl(335, 100%, 65%);
+$Pale-Blue: hsl(243, 100%, 93%);
+$Grayish-Blue: hsl(229, 7%, 55%);
+$Dark-Blue: hsl(228, 56%, 26%);
+$Very-Dark-Blue: hsl(229, 57%, 11%);
+$progress-color:hsl(229, 57%, 16%);
+$fs-l: 14px;
+$fs-b:20px;
+$ff:'Raleway', sans-serif;
+
+
+@mixin centering($r:center,$c:center,$d:row wrap,$g:20px)
+{
+    display: flex;
+    justify-content: $r;
+    align-items:$c;
+    flex-flow: $d;
+    gap:$g;
+    
+}
+
+@mixin cardProgress($w:100%,$h:10px,$bg:$progress-color,$bo:5px solid $Very-Dark-Blue,$br:5px,$cw:100%,$cb:white,$ca:blue,$caw:10px) {
+    &{width:$w;
+    height: $h;
+    background-color: $bg;
+    position: relative;
+    border-radius: $br;
+    border: $bo;
+    &::before{position: absolute;content:"";width:$cw;height: calc(100% - nth($bo,1));top:.8px;left: 1px;background: $cb;border-radius: $br;}
+    &::after{position: absolute;content:"";width:$caw;height: calc(100% - nth($bo,1)*2);top:2px;left: 68.6%;background: $ca;border-radius: $br;z-index: 3;}
+
+    }
+}
+%card{background-color: $Dark-Blue;padding: 30px;}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    body
+    {
+        @include centering();
+        min-height: 100vh;
+        background: $Very-Dark-Blue url(./images/bg-desktop.png) 10% 120% no-repeat;
+        background-size: contain;
+        font-family: $ff;
+        
+        main
+        {
+            @include centering();
+            width:900px;
+            min-height: 200px;
+            font-size: 14px;
+            .card{         
+            @include centering(flex-start,flex-start,column wrap);
+            @extend %card;
+            flex-grow:1;
+            &_info{border-radius: 10px 100px 10px 10px;
+                .card_features{ul{@include centering(space-between );list-style: none; li{@include centering();width:40px;height:40px;background-color: $Very-Dark-Blue;padding: 8px;border-radius: 5px; img{max-width:100%;height:100%;}}}};
+                }
+            &.usage-plan{position:relative;flex-grow:3;@include centering(center,flex-start ,column wrap ,15px );border-radius: 10px;color:$Pale-Blue;align-self: end; strong{font-size: 16px;};}
+            .usage-plan_progress{
+            @include cardProgress(100%,15px ,$progress-color,2px solid $progress-color ,8px,70%, linear-gradient(to right,nth($Gradient,1),nth($Gradient,2)),$Pale-Blue,7px);
+            }
+            .usage-plan_limit{@include centering(space-between,center);width: 100%;font-weight: 700;}
+            sub,sup{vertical-align:baseline;font-weight: $fs-b;}
+            .usage-plan_remain{@include centering() ;position: absolute;top:-35px;left:94%;transform:translateX(-95%);background-color: lighten($Pale-Blue,80%);padding:12px;width: 150px;color:$Very-Dark-Blue;font-size: 30px;font-weight:
+            700;border-radius:10px;border-radius:10px 10px 0px 10px;
+                span:last-of-type{color:$Grayish-Blue;font-size: $fs-l;}
+                &::before{position: absolute;top:100%;left:100%;border:15px solid transparent;border-right-color:lighten($Pale-Blue,80%);content:"";display: block;left:98.5%;transform: inherit;top:75%}
+            }
+            }
+        }
+    
+    }
+}
+
+@media (max-width:767px) {
+    body{background:$Very-Dark-Blue  url('./images/bg-mobile.png')  10% 100% no-repeat;background-size: cover;main{width:300px;
+        .usage-plan{padding: 45px 25px;&_remain{border-radius: 10px !important;top: 75% !important;left:50% !important;transform: translateX(-55%) !important;&::before{left:100% !important;transform: translateX(-100%) !important;border-right-color: transparent !important;}}
+    }}
+    
+}}
