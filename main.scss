@@ -70,7 +70,7 @@ $ff:'Raleway', sans-serif;
             &_info{border-radius: 10px 100px 10px 10px;@include centering(center,flex-start,column wrap);
                 .card_features{ul{@include centering(space-between );list-style: none; li{@include centering();width:45px;height:35px;background-color: $Very-Dark-Blue;padding: 8px;border-radius: 5px; img{max-width:100%;height:100%;}}}};
                 }
-            &.usage-plan{min-height: 150px;top:-45px;position:relative;flex-grow:4;@include centering(center,flex-start ,column wrap ,15px );border-radius: 10px;color:$Pale-Blue;align-self: end; strong{font-size: 16px;};}
+            &.usage-plan{min-height: 150px;top:-35px;position:relative;flex-grow:4;@include centering(center,flex-start ,column wrap ,15px );border-radius: 10px;color:$Pale-Blue;align-self: end; strong{font-size: 16px;};}
             .usage-plan_progress{
             @include cardProgress(100%,15px ,$progress-color,2px solid $progress-color ,8px,70%, linear-gradient(to right,nth($Gradient,1),nth($Gradient,2)),$Pale-Blue,7px);
             }
