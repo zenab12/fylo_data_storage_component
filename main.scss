@@ -48,24 +48,28 @@ $ff:'Raleway', sans-serif;
     {
         @include centering();
         min-height: 100vh;
-        background: $Very-Dark-Blue url(./images/bg-desktop.png) 10% 120% no-repeat;
+        background: $Very-Dark-Blue url(./images/bg-desktop.png) 10% 100% no-repeat;
         background-size: contain;
         font-family: $ff;
-        
+        h1{position: absolute;top:0;left:0;color: transparent}
         main
         {
             @include centering();
-            width:900px;
-            min-height: 200px;
+            width:1000px;
+            min-height: 270px;
             font-size: 14px;
+            position: relative;
+            top:-60px;
+            margin:0px 20px;
             .card{         
             @include centering(flex-start,flex-start,column wrap);
             @extend %card;
             flex-grow:1;
-            &_info{border-radius: 10px 100px 10px 10px;
-                .card_features{ul{@include centering(space-between );list-style: none; li{@include centering();width:40px;height:40px;background-color: $Very-Dark-Blue;padding: 8px;border-radius: 5px; img{max-width:100%;height:100%;}}}};
+            min-height: 190px;
+            &_info{border-radius: 10px 100px 10px 10px;@include centering(center,flex-start,column wrap);
+                .card_features{ul{@include centering(space-between );list-style: none; li{@include centering();width:50px;height:40px;background-color: $Very-Dark-Blue;padding: 8px;border-radius: 5px; img{max-width:100%;height:100%;}}}};
                 }
-            &.usage-plan{position:relative;flex-grow:3;@include centering(center,flex-start ,column wrap ,15px );border-radius: 10px;color:$Pale-Blue;align-self: end; strong{font-size: 16px;};}
+            &.usage-plan{position:relative;flex-grow:4;@include centering(center,flex-start ,column wrap ,15px );border-radius: 10px;color:$Pale-Blue;align-self: end; strong{font-size: 16px;};}
             .usage-plan_progress{
             @include cardProgress(100%,15px ,$progress-color,2px solid $progress-color ,8px,70%, linear-gradient(to right,nth($Gradient,1),nth($Gradient,2)),$Pale-Blue,7px);
             }
@@ -74,7 +78,7 @@ $ff:'Raleway', sans-serif;
             .usage-plan_remain{@include centering() ;position: absolute;top:-35px;left:94%;transform:translateX(-95%);background-color: lighten($Pale-Blue,80%);padding:12px;width: 150px;color:$Very-Dark-Blue;font-size: 30px;font-weight:
             700;border-radius:10px;border-radius:10px 10px 0px 10px;
                 span:last-of-type{color:$Grayish-Blue;font-size: $fs-l;}
-                &::before{position: absolute;top:100%;left:100%;border:15px solid transparent;border-right-color:lighten($Pale-Blue,80%);content:"";display: block;left:98.5%;transform: inherit;top:75%}
+                &::before{position: absolute;left:99.5%;z-index: -10;border:15px solid transparent;border-right-color:lighten($Pale-Blue,80%);content:"";display: block;transform: inherit;top:72%}
             }
             }
         }
