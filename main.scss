@@ -51,9 +51,9 @@ $ff:'Raleway', sans-serif;
         background: $Very-Dark-Blue url(./images/bg-desktop.png) 10% 100% no-repeat;
         background-size: contain;
         font-family: $ff;
-        h1{position: absolute;top:0;left:0;color: transparent}
         main
         {
+            h1{position: absolute;top:0;left:0;color: transparent}
             @include centering();
             width:1000px;
             min-height: 270px;
