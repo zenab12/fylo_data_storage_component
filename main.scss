@@ -43,6 +43,7 @@ $ff:'Raleway', sans-serif;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+}
     body
     {
         @include centering();
@@ -79,7 +80,6 @@ $ff:'Raleway', sans-serif;
         }
     
     }
-}
 
 @media (max-width:767px) {
     body{background:$Very-Dark-Blue  url('./images/bg-mobile.png')  10% 100% no-repeat;background-size: cover;main{width:300px;
