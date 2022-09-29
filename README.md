@@ -24,7 +24,8 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 
 ### Screenshot
-![_D__Learn_Front-End%20mentor_fylo_data_storage_component-main_index html(Nest Hub)](https://user-images.githubusercontent.com/78083890/193021984-1e36ad2f-35bc-48d3-86f8-840ce860e2ce.png)
+
+![zenab12 github io_fylo_data_storage_component_(Nest Hub)](https://user-images.githubusercontent.com/78083890/193034306-780a01bc-1852-4c8c-ad79-777ab9bacb78.png)
 
 ### Links
 
