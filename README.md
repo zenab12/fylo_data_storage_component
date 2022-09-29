@@ -15,3 +15,15 @@ This is a solution to the [Fylo data storage component challenge on Frontend Men
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+
+### Screenshot
+
+![](./screenshot.jpg)
