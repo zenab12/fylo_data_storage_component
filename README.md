@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/testimonialsgridsection-r_LRnCsYPf)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/fylodatastoragecomponent-cV4FKpUr8O)
 - Live Site URL: [Live Demo](https://zenab12.github.io/fylo_data_storage_component/)
 
 ## My process
